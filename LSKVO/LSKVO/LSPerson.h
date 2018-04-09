@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface LSPerson : NSObject
+{
+    NSString * sex;
+}
 
 @property (nonatomic, copy) NSString *name;
 

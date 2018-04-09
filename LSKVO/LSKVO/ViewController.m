@@ -20,21 +20,29 @@
     [super viewDidLoad];
     LSPerson * pesrson = [[LSPerson alloc]init];
     
-    [pesrson setValue:@"liliang" forKey:@"name"];
+//    [pesrson setValue:@"liliang" forKey:@"name"];
     
     self.person = pesrson;
     
+    
+    pesrson.age = @"12";
+    
 
     [self addKVO];
+    
+
 }
 
 -(void)addKVO{
     
     [self.person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
-
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.person.name = @"liliang";
+        self.person.age = @"11";
     });
+
+
 }
 
 
