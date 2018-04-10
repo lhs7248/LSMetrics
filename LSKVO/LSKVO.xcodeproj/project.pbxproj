@@ -16,6 +16,7 @@
 		1797910A207B5F5B00FD5B59 /* LSKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17979109207B5F5B00FD5B59 /* LSKVOTests.m */; };
 		17979115207B5F5B00FD5B59 /* LSKVOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17979114207B5F5B00FD5B59 /* LSKVOUITests.m */; };
 		17979124207B612A00FD5B59 /* LSPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 17979123207B612A00FD5B59 /* LSPerson.m */; };
+		17979128207C6ED600FD5B59 /* NSObject+IMPKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 17979127207C6ED600FD5B59 /* NSObject+IMPKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		17979116207B5F5B00FD5B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17979122207B612A00FD5B59 /* LSPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSPerson.h; sourceTree = "<group>"; };
 		17979123207B612A00FD5B59 /* LSPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSPerson.m; sourceTree = "<group>"; };
+		17979126207C6ED600FD5B59 /* NSObject+IMPKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+IMPKVO.h"; sourceTree = "<group>"; };
+		17979127207C6ED600FD5B59 /* NSObject+IMPKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IMPKVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		179790EF207B5F5B00FD5B59 /* LSKVO */ = {
 			isa = PBXGroup;
 			children = (
+				17979125207C6EB900FD5B59 /* IMPKVO */,
 				179790F0207B5F5B00FD5B59 /* AppDelegate.h */,
 				179790F1207B5F5B00FD5B59 /* AppDelegate.m */,
 				179790F3207B5F5B00FD5B59 /* ViewController.h */,
@@ -135,6 +139,15 @@
 				17979116207B5F5B00FD5B59 /* Info.plist */,
 			);
 			path = LSKVOUITests;
+			sourceTree = "<group>";
+		};
+		17979125207C6EB900FD5B59 /* IMPKVO */ = {
+			isa = PBXGroup;
+			children = (
+				17979126207C6ED600FD5B59 /* NSObject+IMPKVO.h */,
+				17979127207C6ED600FD5B59 /* NSObject+IMPKVO.m */,
+			);
+			path = IMPKVO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			files = (
 				179790F5207B5F5B00FD5B59 /* ViewController.m in Sources */,
 				17979100207B5F5B00FD5B59 /* main.m in Sources */,
+				17979128207C6ED600FD5B59 /* NSObject+IMPKVO.m in Sources */,
 				179790F2207B5F5B00FD5B59 /* AppDelegate.m in Sources */,
 				17979124207B612A00FD5B59 /* LSPerson.m in Sources */,
 			);

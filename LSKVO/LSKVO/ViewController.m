@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LSPerson.h"
+#import "NSObject+IMPKVO.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LSPerson * person;
@@ -28,12 +29,22 @@
     pesrson.age = @"12";
     
 
-    [self addKVO];
-    
+//    [self addKVO];
+    [self addCumtomKVO];
 
 }
 
--(void)addKVO{
+- (void)addCumtomKVO{
+    [self.person ls_addObserver:self forKeyPath:@"name" callBack:^(id  _Nullable observedObject, NSString * _Nullable observedKey, id  _Nullable oldValue, id  _Nullable newValue) {
+        
+    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.person.name = @"liliang";
+    
+    });
+}
+
+- (void)addKVO{
     
     [self.person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
     
@@ -41,6 +52,8 @@
         self.person.name = @"liliang";
         self.person.age = @"11";
     });
+    
+    [self.person removeObserver:self forKeyPath:@"name"];
 
 
 }
