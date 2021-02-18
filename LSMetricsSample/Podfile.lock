@@ -1,0 +1,16 @@
+PODS:
+  - LSMetrics (0.0.1)
+
+DEPENDENCIES:
+  - LSMetrics (from `../`)
+
+EXTERNAL SOURCES:
+  LSMetrics:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LSMetrics: 8182c0c87a7c8b51edf296bd1d1581118a8f503b
+
+PODFILE CHECKSUM: a6ff44157bffad4f211844f424d0b9b218019193
+
+COCOAPODS: 1.8.4
